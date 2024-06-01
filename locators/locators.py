@@ -1,3 +1,8 @@
+"""
+Class where locator information is kept
+
+"""
+
 from selenium.webdriver.common.by import By
 
 

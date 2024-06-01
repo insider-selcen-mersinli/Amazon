@@ -1,13 +1,22 @@
+"""
+This class is the class where the tests are run.
+
+"""
+
+
 from Amazon.test.baseTest import BaseTest
 
 
 class TestAmazon(BaseTest):
 
     def test(self):
+        mail = "testhesabim29@gmail.com"
+        password = "26032001*"
+
         self.assertTrue(self.home.homepage_banner_is_displayed(), "Wrong page")
 
         self.home.click_signin_page()
-        self.login.login("selcenfethiyemersinli@gmail.com", "4518205eM*")
+        self.login.login(mail, password)
 
         self.home.search_product("Samsung")
 

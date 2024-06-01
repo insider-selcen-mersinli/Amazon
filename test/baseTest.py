@@ -1,3 +1,9 @@
+"""
+Base class containing setUp and tearDown functions common to each test.
+
+"""
+
+
 import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -13,6 +19,11 @@ from Amazon.page.wishlistPage import WishlistPage
 
 class BaseTest(unittest.TestCase):
     def setUp(self):
+        """
+        Basic preparations before the test starts
+
+        """
+
         """
         chrome_options = webdriver.ChromeOptions()
         option.add_argument('--start-maximized')
@@ -32,4 +43,9 @@ class BaseTest(unittest.TestCase):
         self.wishlist = WishlistPage(self.base)
 
     def tearDown(self):
+        """
+        Closing procedures at the end of the test
+        
+        """
+
         self.driver.quit()
